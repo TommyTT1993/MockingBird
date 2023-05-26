@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-if [ -z "$(ls -A /workspace/synthesizer/saved_models)" ] || [ "$FORCE_RETRAIN" = true ] ; then
+if [ -z "$(ls -A /workspace/data/ckpt/synthesizer/saved_models)" ] || [ "$FORCE_RETRAIN" = true ] ; then
     /workspace/datasets_download/download.sh
     /workspace/datasets_download/extract.sh
     for DATASET in ${TRAIN_DATASETS}
